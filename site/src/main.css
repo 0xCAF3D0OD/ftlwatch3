@@ -208,3 +208,26 @@ input[type='checkbox'] {
 .available-option {
   @apply bg-blue-600
 }
+
+/*--------- HomePage ---------- */
+
+.main-card-options {
+  @apply h-full grid lg:grid-cols-1 gap-10
+
+}
+.x4-card-options {
+  @apply grid grid-rows-2 grid-cols-4 lg:grid-cols-1 lg:grid-rows-4 gap-5
+}
+.card-options {
+  @apply w-full relative flex items-center justify-center border rounded-md
+}
+
+.image-options {
+  @apply max-h-[100px] pt-5 object-cover bg-cover bg-center z-0
+}
+
+.data-options {
+  @apply z-10 absolute w-full h-full flex justify-center items-center
+  bg-black/50 opacity-0 hover:opacity-100 duration-300
+  text-xl text-white font-semibold rounded-md cursor-pointer
+}
