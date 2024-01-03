@@ -1,5 +1,6 @@
 // import AppLogo from '../../assets/logo_transparent_small.png';
 import projectsLogo from '../../assets/projects.svg';
+import usersStatsLogo from '../../assets/stats-users.svg';
 import { Avatar, Button, Card, CardBody, CardFooter } from '@material-tailwind/react';
 import { useLogin } from 'Hooks/LoginProvider';
 import { commonTitle } from 'Utils/commonTitle';
@@ -31,16 +32,16 @@ export default function HomePage(): JSX.Element {
   React.useEffect(() => {document.title = commonTitle('Home');}, []);
 
   const options1 = [
-    { path: "/basics/projects", name: "projects"},
-    { path: "/projects/tinder", name: "tinder"},
-    { path: "/Tableau", name: "stats table"},
-    { path: "/basics/projects", name: "projects"},
+    { img: projectsLogo, path : "/basics/projects", name: "projects"},
+    { img: usersStatsLogo, path: "/projects/tinder", name: "tinder"},
+    { img: usersStatsLogo, path: "/Tableau", name: "stats table"},
+    { img: usersStatsLogo, path: "/basics/projects", name: "projects"},
   ]
   const options2 = [
-    { path: "/locations/peaks", name: "pres. peaks"},
-    { path: "/locations/userstotal", name: "users pres."},
-    { path: "/locations/love?graph=love_actual_2d", name: "love recent"},
-    { path: "/locations/love?graph=love_cursus_2d", name: "love cursus"},
+    { img: usersStatsLogo, path: "/locations/peaks", name: "pres. peaks"},
+    { img: usersStatsLogo, path: "/locations/userstotal", name: "users pres."},
+    { img: usersStatsLogo, path: "/locations/love?graph=love_actual_2d", name: "love recent"},
+    { img: usersStatsLogo, path: "/locations/love?graph=love_cursus_2d", name: "love cursus"},
   ]
 
   return (
@@ -52,19 +53,19 @@ export default function HomePage(): JSX.Element {
             <div className='x4-card-options'>
             {options1.map((option) =>(
               <div className="card-options">
-                <img src={projectsLogo} className='image-options'></img>
+                <img src={option.img} className='image-options'></img>
                 <GoToTableau path={option.path} name={option.name} />
               </div>
             ))}
             </div>
-            <div className='x4-card-options'>
-              {options2.map((option) => (
-                <div className="card-options">
-                  <img src={projectsLogo} className='image-options'></img>
-                  <GoToTableau path={option.path} name={option.name}/>
-                </div>
-              ))}
-            </div>
+            {/*<div className='x4-card-options'>*/}
+            {/*  {options2.map((option) => (*/}
+            {/*    <div className="card-options">*/}
+            {/*      <img src={projectsLogo} className='image-options'></img>*/}
+            {/*      <GoToTableau path={option.path} name={option.name}/>*/}
+            {/*    </div>*/}
+            {/*  ))}*/}
+            {/*</div>*/}
           </div>
         </div>
       </div>
@@ -90,12 +91,12 @@ export default function HomePage(): JSX.Element {
                 {/*<img src={AppLogo}*/}
                 {/*     className="h-12 flip-horizontal"*/}
                 {/*/>*/}
-                <h1 className='text-black dark:text-white tracking-wide font-extrabold'>
+                <h1 className='text-white tracking-wide font-extrabold'>
                   Welcome to 42lwatch _V3_
                 </h1>
               </div>
               <div>
-                <p className=" leading-relaxed px-10 font-bold text-2xl max-w-2xl">
+                <p className="text-white leading-relaxed px-10 font-bold text-2xl max-w-2xl">
                   Take a dive into a one-stop solution for accessing real-time data on all 42Lausanne students.
                 </p>
               </div>
@@ -104,17 +105,17 @@ export default function HomePage(): JSX.Element {
           <div className="col-span-1 flex items-start">
             <p>
               <div className='flex items-center gap-5 p-5'>
-                <h1 className='text-black dark:text-white tracking-wide font-extrabold'>
+                <h1 className='text-white tracking-wide font-extrabold'>
                   Open-source
                 </h1>
               </div>
               <div>
-                <p className="leading-relaxed px-10 my-2 font-bold text-2xl max-w-3xl">
-                  <p className="pb-5">
+                <p className="text-white leading-relaxed px-10 my-2 font-bold text-2xl max-w-3xl">
+                  <p className="pb-5 text-white ">
                     Explore detailed student profiles in a user-friendly interface and join us in making this tool even better.
                   </p>
                   Open-source at its core, we invite you to contribute to our ever-evolving codebase.
-                  <p className='pt-5'>
+                  <p className='pt-5 text-white '>
                     Let's transform 42Lausanne's student data experience together!
                   </p>
                 </p>

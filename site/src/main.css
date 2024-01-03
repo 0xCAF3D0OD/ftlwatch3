@@ -219,7 +219,7 @@ input[type='checkbox'] {
   @apply grid grid-rows-2 grid-cols-4 lg:grid-cols-1 lg:grid-rows-4 gap-5
 }
 .card-options {
-  @apply w-full relative flex items-center justify-center border rounded-md
+  @apply w-full relative flex items-center justify-center
 }
 
 .image-options {
